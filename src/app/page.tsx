@@ -167,13 +167,13 @@ export default function Home() {
             <div className="min-h-[300px] flex items-center justify-center">
               {gameState.gameStatus === 'waiting' && (
                 <div className="text-center text-gray-500">
-                  <p>点击"开始游戏"按钮开始游戏</p>
+                  <p>点击&quot;开始游戏&quot;按钮开始游戏</p>
                 </div>
               )}
               {gameState.gameStatus === 'drawing' && (
                 <div className="text-center text-gray-500">
                   <p>正在绘画中...</p>
-                  <p className="text-sm mt-2">画完后点击"让AI猜测"按钮</p>
+                  <p className="text-sm mt-2">画完后点击&quot;让AI猜测&quot;按钮</p>
                 </div>
               )}
               {gameState.gameStatus === 'guessing' && (
@@ -210,11 +210,11 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-md p-6 mt-6">
           <h3 className="text-lg font-semibold mb-3">游戏说明</h3>
           <ul className="list-disc list-inside space-y-1 text-gray-600">
-            <li>点击"开始游戏"按钮开始新游戏</li>
+            <li>点击&quot;开始游戏&quot;按钮开始新游戏</li>
             <li>记住显示的词汇，然后在画布上画出这个物品</li>
-            <li>画完后点击"让AI猜测"按钮</li>
+            <li>画完后点击&quot;让AI猜测&quot;按钮</li>
             <li>如果AI猜对了，你将获得10分</li>
-            <li>点击"下一轮"继续游戏</li>
+            <li>点击&quot;下一轮&quot;继续游戏</li>
           </ul>
           <p className="text-sm text-gray-500 mt-3">
             💡 提示：请在.env.local文件中设置GEMINI_API_KEY环境变量
