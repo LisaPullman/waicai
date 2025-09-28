@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__edgeone-pages-mcp-server__deploy_folder"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
