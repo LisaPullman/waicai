@@ -4,9 +4,6 @@
       "maxDuration": 30
     }
   },
-  "env": {
-    "SILICONFLOW_API_KEY": "@siliconflow_api_key"
-  },
   "build": {
     "env": {
       "NEXT_TELEMETRY_DISABLED": "1"
