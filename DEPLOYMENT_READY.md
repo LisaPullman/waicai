@@ -101,7 +101,7 @@ npm run deploy
 #### **环境变量设置**
 在 Vercel 控制台设置:
 ```
-SILICONFLOW_API_KEY=sk-crzxzogodbqpsbofliexszmdjtefzlertgjzvjaifjzprsns
+SILICONFLOW_API_KEY=your_siliconflow_api_key_here
 ```
 
 ### ⚡ 即时可用功能

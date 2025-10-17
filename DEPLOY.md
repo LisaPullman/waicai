@@ -34,7 +34,7 @@ git push origin main
 ### 3. 配置环境变量
 在 Vercel 项目设置中添加：
 ```
-SILICONFLOW_API_KEY=sk-crzxzogodbqpsbofliexszmdjtefzlertgjzvjaifjzprsns
+SILICONFLOW_API_KEY=your_siliconflow_api_key_here
 ```
 
 ### 4. 部署配置
