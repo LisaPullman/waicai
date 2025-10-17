@@ -24,3 +24,118 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  /* 防止页面缩放 */
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  /* 优化触摸滚动 */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+  }
+}
+
+/* iPad 横屏优化 */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .game-container {
+    padding: 1rem;
+  }
+}
+
+/* 画布滑动条样式优化 */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 颜色选择器优化 */
+input[type="color"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 6px;
+}
+
+/* 移动端优化类 */
+.mobile-optimized {
+  /* 防止双击缩放 */
+  touch-action: manipulation;
+}
+
+.mobile-landscape {
+  /* 横屏时的特殊样式 */
+  overflow-x: auto;
+}
+
+/* 移动端按钮优化 */
+@media (max-width: 768px) {
+  button {
+    min-height: 44px; /* iOS 推荐的最小触摸目标 */
+    min-width: 44px;
+  }
+  
+  /* 画布在小屏幕上的优化 */
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* iPad 专用优化 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .game-container {
+    max-width: 90%;
+  }
+  
+  /* iPad 横屏时的网格布局优化 */
+  @media (orientation: landscape) {
+    .xl\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 0.5rem;
+  }
+}

@@ -6,6 +6,8 @@ export function getRandomWord(): string {
 
 export async function guessDrawing(imageData: string): Promise<GuessResponse> {
   try {
+    console.log('开始发送AI猜测请求...');
+    
     const response = await fetch('/api/guess', {
       method: 'POST',
       headers: {
@@ -14,14 +16,19 @@ export async function guessDrawing(imageData: string): Promise<GuessResponse> {
       body: JSON.stringify({ imageData }),
     });
 
+    console.log('API响应状态:', response.status, response.statusText);
+
     if (!response.ok) {
-      throw new Error('AI猜测失败');
+      const errorText = await response.text();
+      console.error('API错误响应:', errorText);
+      throw new Error(`AI猜测失败: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
+    console.log('AI猜测成功:', data);
     return data;
   } catch (error) {
-    console.error('猜测失败:', error);
+    console.error('猜测过程中出错:', error);
     throw error;
   }
 }

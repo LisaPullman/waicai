@@ -1,11 +1,11 @@
 # AI 你画我猜网页游戏
 
-一个基于Next.js和Gemini AI的在线你画我猜游戏。玩家可以在画布上作画，AI系统会分析画作并猜测画的是什么内容。
+一个基于Next.js和硅基流动AI的在线你画我猜游戏。玩家可以在画布上作画，AI系统会分析画作并猜测画的是什么内容。
 
 ## 功能特点
 
 - 🎨 在线绘图画布，支持调节画笔大小和颜色
-- 🤖 AI智能识别，使用Gemini API分析手绘图像
+- 🤖 AI智能识别，使用硅基流动API分析手绘图像
 - 🎯 游戏计分系统，猜对可获得10分
 - 📱 响应式设计，支持移动端访问
 - 🎮 简单易用的游戏界面
@@ -14,15 +14,15 @@
 
 - **前端框架**: Next.js 15 + React 18
 - **样式**: Tailwind CSS
-- **AI服务**: Google Gemini API
+- **AI服务**: 硅基流动 API (Qwen3-VL-30B-A3B-Instruct)
 - **语言**: TypeScript
 
 ## 快速开始
 
-### 1. 获取Gemini API密钥
+### 1. 获取硅基流动API密钥
 
-1. 访问 [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. 创建新的API密钥
+1. 访问 [硅基流动官网](https://siliconflow.cn/)
+2. 注册账号并获取API密钥
 3. 复制密钥备用
 
 ### 2. 配置项目
@@ -37,7 +37,7 @@ npm install
 
 # 配置环境变量
 cp .env.local.example .env.local
-# 编辑 .env.local 文件，添加你的GEMINI_API_KEY
+# 编辑 .env.local 文件，添加你的SILICONFLOW_API_KEY
 ```
 
 ### 3. 启动开发服务器
@@ -63,7 +63,7 @@ npm run dev
 ai-drawing-game/
 ├── src/
 │   ├── app/
-│   │   ├── api/guess/route.ts    # Gemini API调用接口
+│   │   ├── api/guess/route.ts    # 硅基流动API调用接口
 │   │   ├── page.tsx              # 主游戏页面
 │   │   └── layout.tsx            # 页面布局
 │   ├── components/
@@ -81,7 +81,7 @@ ai-drawing-game/
 在 `.env.local` 文件中配置以下变量：
 
 ```
-GEMINI_API_KEY=your_gemini_api_key_here
+SILICONFLOW_API_KEY=your_siliconflow_api_key_here
 ```
 
 ## 部署
@@ -90,12 +90,12 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 1. 推送代码到GitHub
 2. 在Vercel中导入项目
-3. 设置环境变量 `GEMINI_API_KEY`
+3. 设置环境变量 `SILICONFLOW_API_KEY`
 4. 点击部署
 
 ### 其他平台
 
-确保在部署环境中设置 `GEMINI_API_KEY` 环境变量，然后运行构建命令：
+确保在部署环境中设置 `SILICONFLOW_API_KEY` 环境变量，然后运行构建命令：
 
 ```bash
 npm run build
@@ -104,8 +104,8 @@ npm start
 
 ## 注意事项
 
-- 需要稳定的网络连接以调用Gemini API
-- API调用可能产生费用，请查看Google的定价政策
+- 需要稳定的网络连接以调用硅基流动API
+- API调用可能产生费用，请查看硅基流动的定价政策
 - 建议使用现代浏览器以获得最佳体验
 
 ## 许可证
