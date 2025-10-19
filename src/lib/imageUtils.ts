@@ -79,11 +79,11 @@ export function validateImageData(dataUrl: string): boolean {
  * 为 Vercel 优化的图像处理
  */
 export function optimizeForVercel(canvas: HTMLCanvasElement): string {
-  // Vercel 推荐的图像优化设置
+  // Vercel 推荐的图像优化设置 - 适配更大画布
   return compressCanvasImage(canvas, {
     quality: 0.85,
-    maxWidth: 600,
-    maxHeight: 400,
+    maxWidth: 900,
+    maxHeight: 600,
     format: 'jpeg' // JPEG 通常比 PNG 小
   });
 }
